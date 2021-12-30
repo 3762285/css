@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .cs-module {
+            height: 20px;
+            background-color: violet;
+        }
+
+        .cs-module:empty {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div id="wrap" class="cs-module"></div>
+<div>
+    <input id='req-data' type="button" value="请求数据">
+    <input id='clear-data' type="button" value="清空数据">
+</div>
+<script>
+    var $ = (id) => document.getElementById(id)
+    $('req-data').addEventListener('click', function () {
+        $('wrap').innerHTML = '<span>hello html</span>'
+    })
+    $('clear-data').addEventListener('click', function () {
+        $('wrap').innerHTML = ""
+    })
+</script>
+</body>
+</html>
