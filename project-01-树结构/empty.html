@@ -12,6 +12,9 @@
         .cs-module:empty {
             display: none;
         }
+        dd:empty::before{
+            content:'暂无'
+        }
     </style>
 </head>
 <body>
@@ -20,8 +23,21 @@
     <input id='req-data' type="button" value="请求数据">
     <input id='clear-data' type="button" value="清空数据">
 </div>
+<div>
+    <dl>
+        <dt>姓名</dt>
+        <dd>张三</dd>
+        <dt>性别</dt>
+        <dd></dd>
+    </dl>
+</div>
+<!--
+
+:empty伪类操作：
+
+
+-->
 <script>
-    var 23
     var $ = (id) => document.getElementById(id)
     $('req-data').addEventListener('click', function () {
         $('wrap').innerHTML = '<span>hello html</span>'
